@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="php," />
+  <meta name="keywords" content="PHP,数组，函数," />
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="PHP数组排序PHP - 数组的排序函数 sort() - 以升序对数组排序 rsort() - 以降序对数组排序 asort() - 根据值，以升序对关联数组进行排序 ksort() - 根据键，以升序对关联数组进行排序 arsort() - 根据值，以降序对关联数组进行排序 krsort() - 根据键，以降序对关联数组进行排序  对数组进行升序排序 - sort()下面的例子按照字母升序对数">
-<meta name="keywords" content="php">
+<meta name="keywords" content="PHP,数组，函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP数组排序">
-<meta property="og:url" content="http://yoursite.com/2018/09/11/PHP数组排序/index.html">
+<meta property="og:url" content="https://woshilengbin.github.io/2018/09/11/PHP数组排序/index.html">
 <meta property="og:site_name" content="Peter&#39;s Notes">
 <meta property="og:description" content="PHP数组排序PHP - 数组的排序函数 sort() - 以升序对数组排序 rsort() - 以降序对数组排序 asort() - 根据值，以升序对关联数组进行排序 ksort() - 根据键，以升序对关联数组进行排序 arsort() - 根据值，以降序对关联数组进行排序 krsort() - 根据键，以降序对关联数组进行排序  对数组进行升序排序 - sort()下面的例子按照字母升序对数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T06:45:37.314Z">
+<meta property="og:updated_time" content="2018-09-12T03:10:27.140Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP数组排序">
 <meta name="twitter:description" content="PHP数组排序PHP - 数组的排序函数 sort() - 以升序对数组排序 rsort() - 以降序对数组排序 asort() - 根据值，以升序对关联数组进行排序 ksort() - 根据键，以升序对关联数组进行排序 arsort() - 根据值，以降序对关联数组进行排序 krsort() - 根据键，以降序对关联数组进行排序  对数组进行升序排序 - sort()下面的例子按照字母升序对数">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/11/PHP数组排序/"/>
+  <link rel="canonical" href="https://woshilengbin.github.io/2018/09/11/PHP数组排序/"/>
 
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/11/PHP数组排序/">
+    <link itemprop="mainEntityOfPage" href="https://woshilengbin.github.io/2018/09/11/PHP数组排序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter Leng">
@@ -292,7 +292,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T14:27:19+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T11:09:11+08:00">
                 2018-09-11
               </time>
             
@@ -302,6 +302,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -338,9 +360,9 @@
 <li>arsort() - 根据值，以降序对关联数组进行排序</li>
 <li>krsort() - 根据键，以降序对关联数组进行排序</li>
 </ul>
-<h4 id="对数组进行升序排序-sort"><a href="#对数组进行升序排序-sort" class="headerlink" title="对数组进行升序排序 - sort()"></a>对数组进行升序排序 - sort()</h4><p>下面的例子按照字母升序对数组 $cars 中的元素进行排序: </p>
+<h4 id="对数组进行升序排序-sort"><a href="#对数组进行升序排序-sort" class="headerlink" title="对数组进行升序排序 - sort()"></a>对数组进行升序排序 - sort()</h4><p>下面的例子按照字母升序对数组 $cars 中的元素进行排序：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;SAAB&quot;);</span><br><span class="line">sort($cars);</span><br><span class="line"></span><br><span class="line">$clength=count($cars);</span><br><span class="line">for($x=0;$x&lt;$clength;$x++)</span><br><span class="line">   &#123;</span><br><span class="line">   echo $cars[$x];</span><br><span class="line">   echo &quot;&lt;br&gt;&quot;;</span><br><span class="line">   &#125;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">BMW</span><br><span class="line">SAAB</span><br><span class="line">Volvo</span><br></pre></td></tr></table></figure>
-<p>下面的例子按照数字升序对数组 $numbers 中的元素进行排序： </p>
+<p>下面的例子按照数字升序对数组 $numbers 中的元素进行排序：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$numbers=array(3,5,1,22,11);</span><br><span class="line">sort($numbers);</span><br><span class="line"></span><br><span class="line">$arrlength=count($numbers);</span><br><span class="line">for($x=0;$x&lt;$arrlength;$x++)</span><br><span class="line">   &#123;</span><br><span class="line">   echo $numbers[$x];</span><br><span class="line">   echo &quot;&lt;br&gt;&quot;;</span><br><span class="line">   &#125;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">1</span><br><span class="line">3</span><br><span class="line">5</span><br><span class="line">11</span><br><span class="line">22</span><br></pre></td></tr></table></figure>
 <h4 id="对数组进行降序排序-rsort"><a href="#对数组进行降序排序-rsort" class="headerlink" title="对数组进行降序排序 - rsort()"></a>对数组进行降序排序 - rsort()</h4><p>下面的例子按照字母降序对数组 $cars 中的元素进行排序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;SAAB&quot;);</span><br><span class="line">rsort($cars);</span><br><span class="line"></span><br><span class="line">$clength=count($cars);</span><br><span class="line">for($x=0;$x&lt;$clength;$x++)</span><br><span class="line">   &#123;</span><br><span class="line">   echo $cars[$x];</span><br><span class="line">   echo &quot;&lt;br&gt;&quot;;</span><br><span class="line">   &#125;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">Volvo</span><br><span class="line">SAAB</span><br><span class="line">BMW</span><br></pre></td></tr></table></figure></p>
 <p>下面的例子按照数字降序对数组 $numbers 中的元素进行排序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$numbers=array(3,5,1,22,11);</span><br><span class="line">rsort($numbers);</span><br><span class="line"></span><br><span class="line">$arrlength=count($numbers);</span><br><span class="line">for($x=0;$x&lt;$arrlength;$x++)</span><br><span class="line">   &#123;</span><br><span class="line">   echo $numbers[$x];</span><br><span class="line">   echo &quot;&lt;br&gt;&quot;;</span><br><span class="line">   &#125;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">22</span><br><span class="line">11</span><br><span class="line">5</span><br><span class="line">3</span><br><span class="line">1</span><br></pre></td></tr></table></figure></p>
@@ -365,7 +387,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/php/" rel="tag"># php</a>
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/数组，函数/" rel="tag"># 数组，函数</a>
           
         </div>
       
@@ -387,6 +411,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/12/PHP的四种基本排序算法/" rel="prev" title="PHP的四种基本排序算法">
+                PHP的四种基本排序算法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -467,12 +495,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
             
 
             
@@ -480,7 +517,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
