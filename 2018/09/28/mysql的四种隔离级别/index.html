@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="搭建Git服务器 工具  Git创建时间:2016-10-22 20:08字数:776 阅读:212 评论:1最近由于准备在公司的服务器上面搭建静态博客（Hexo），然后需要先搭建一个git服务器作为转接，整个过程看似顺利，十几分钟就搭建完成，不过最后在验证这块卡了两个小时，在此记录下来，供准备搭建git服务器的新手小伙伴们借鉴。 搭建git服务器通过ssh链接到服务器，开始进行操作 第一步在服务">
+<meta name="description" content="隔离级别数据库事务有不同的隔离级别，不同的隔离级别对锁的使用是不同的，锁的应用最终导致不同事务的隔离级别。实现隔离级别的方式就是加锁 隔离级别的分类读未提交 Read Uncommitted（在本次事务中可以读到其他事务中没有提交的数据-脏数据）读已提交 Read Committed （只能读到其他事务提交过的数据。如果在当前事务中，其他事务有提交，则两次读取结果不同）可重复读 Repeatabl">
 <meta name="keywords" content="php">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git免密pull 和push">
-<meta property="og:url" content="https://woshilengbin.github.io/2018/09/27/git免密pull-和push/index.html">
+<meta property="og:title" content="mysql的四种隔离级别">
+<meta property="og:url" content="https://woshilengbin.github.io/2018/09/28/mysql的四种隔离级别/index.html">
 <meta property="og:site_name" content="Peter&#39;s Notes">
-<meta property="og:description" content="搭建Git服务器 工具  Git创建时间:2016-10-22 20:08字数:776 阅读:212 评论:1最近由于准备在公司的服务器上面搭建静态博客（Hexo），然后需要先搭建一个git服务器作为转接，整个过程看似顺利，十几分钟就搭建完成，不过最后在验证这块卡了两个小时，在此记录下来，供准备搭建git服务器的新手小伙伴们借鉴。 搭建git服务器通过ssh链接到服务器，开始进行操作 第一步在服务">
+<meta property="og:description" content="隔离级别数据库事务有不同的隔离级别，不同的隔离级别对锁的使用是不同的，锁的应用最终导致不同事务的隔离级别。实现隔离级别的方式就是加锁 隔离级别的分类读未提交 Read Uncommitted（在本次事务中可以读到其他事务中没有提交的数据-脏数据）读已提交 Read Committed （只能读到其他事务提交过的数据。如果在当前事务中，其他事务有提交，则两次读取结果不同）可重复读 Repeatabl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-27T04:07:07.481Z">
+<meta property="og:updated_time" content="2018-09-28T10:09:23.828Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git免密pull 和push">
-<meta name="twitter:description" content="搭建Git服务器 工具  Git创建时间:2016-10-22 20:08字数:776 阅读:212 评论:1最近由于准备在公司的服务器上面搭建静态博客（Hexo），然后需要先搭建一个git服务器作为转接，整个过程看似顺利，十几分钟就搭建完成，不过最后在验证这块卡了两个小时，在此记录下来，供准备搭建git服务器的新手小伙伴们借鉴。 搭建git服务器通过ssh链接到服务器，开始进行操作 第一步在服务">
+<meta name="twitter:title" content="mysql的四种隔离级别">
+<meta name="twitter:description" content="隔离级别数据库事务有不同的隔离级别，不同的隔离级别对锁的使用是不同的，锁的应用最终导致不同事务的隔离级别。实现隔离级别的方式就是加锁 隔离级别的分类读未提交 Read Uncommitted（在本次事务中可以读到其他事务中没有提交的数据-脏数据）读已提交 Read Committed （只能读到其他事务提交过的数据。如果在当前事务中，其他事务有提交，则两次读取结果不同）可重复读 Repeatabl">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://woshilengbin.github.io/2018/09/27/git免密pull-和push/"/>
+  <link rel="canonical" href="https://woshilengbin.github.io/2018/09/28/mysql的四种隔离级别/"/>
 
 
 
 
 
-  <title>git免密pull 和push | Peter's Notes</title>
+  <title>mysql的四种隔离级别 | Peter's Notes</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://woshilengbin.github.io/2018/09/27/git免密pull-和push/">
+    <link itemprop="mainEntityOfPage" href="https://woshilengbin.github.io/2018/09/28/mysql的四种隔离级别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter Leng">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git免密pull 和push</h1>
+          <h1 class="post-title" itemprop="name headline">mysql的四种隔离级别</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T12:06:52+08:00">
-                2018-09-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-28T18:09:16+08:00">
+                2018-09-28
               </time>
             
 
@@ -311,8 +311,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/27/git免密pull-和push/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/27/git免密pull-和push/" itemprop="commentCount"></span>
+                <a href="/2018/09/28/mysql的四种隔离级别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/28/mysql的四种隔离级别/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -320,7 +320,7 @@
 
           
           
-             <span id="/2018/09/27/git免密pull-和push/" class="leancloud_visitors" data-flag-title="git免密pull 和push">
+             <span id="/2018/09/28/mysql的四种隔离级别/" class="leancloud_visitors" data-flag-title="mysql的四种隔离级别">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -351,23 +351,34 @@
       
 
       
-        <p>搭建Git服务器<br> 工具  Git<br>创建时间:2016-10-22 20:08<br>字数:776 阅读:212 评论:1<br>最近由于准备在公司的服务器上面搭建静态博客（Hexo），然后需要先搭建一个git服务器作为转接，整个过程看似顺利，十几分钟就搭建完成，不过最后在验证这块卡了两个小时，在此记录下来，供准备搭建git服务器的新手小伙伴们借鉴。</p>
-<p>搭建git服务器<br>通过ssh链接到服务器，开始进行操作</p>
-<p>第一步<br>在服务器上安装 git</p>
-<p>$ sudo apt-get install git<br>1<br>1<br>第二步<br>创建 git 用户，用来运行git服务</p>
-<p>$ sudo adduser git<br>1<br>1<br>第三步<br>创建证书，免密码登录：<br>收集所有需要登录的用户的公钥（id_rsa.pub）文件，把所有公钥导入到 /home/git/.ssh/authorized_keys 文件内，一行一个。<br>如果个人的git中的公钥已经连接了其他服务器如：github，可以参考 一个客户端设置多个github账号</p>
-<p>注意：一定要通过下面的命令将该文件其他用户的所有权限移除，否则会出现文章尾部问题</p>
-<p>$ chmod 600 authorized_keys<br>1<br>1<br>第四步<br>初始化git仓库</p>
-<p>$ git init –bare test.git<br>1<br>1<br>git创建一个裸仓库，裸仓库没有工作区，因为服务器上的git仓库纯粹为了共享，所有不能让用户直接登录到服务器上去改工作区，并且服务器的git仓库通常以 .git 结尾。然后，修改owner改为git：</p>
-<p>$ sudo chown -R git:git test.git<br>1<br>1<br>第五步<br>禁用shell登录：<br>处于安全的考虑，第二步创建的git用户不允许登录shell，这可以通过编辑 /etc/passwd 文件完成。</p>
-<p>git:x:1003:1003::/home/git:/bin/bash<br>1<br>1<br>改为</p>
-<p>git:x:1003:1003::/home/git:/usr/bin/git-shell<br>1<br>1<br>这样，git用户可以正常通过ssh使用git，但无法登录shell，因为我们为git用户指定的git-shell每次一登录就自动退出。</p>
-<p>第六步<br>克隆远程仓库：<br>现在，可以通过git clone命令克隆远程仓库了，在各自的电脑上运行：</p>
-<p>$ git clone git@server:/home/git/test.git<br>1<br>1<br>如果服务器的ssh端口不是默认的22的话，比如说6789，可以这样写：</p>
-<p>$ git clone ssh://git@server:6789/home/git/test.git<br>1<br>1<br>问题来了<br>本来根据文档，根据广大猿友的经验，我的搭建之路已经完成了，然后最后一步出现了问题。每次跟服务器进行交互(clone,pull,push)，都让我输入git的密码，也就是说，我配置的ssh没有生效。然后就开始到处找原因，重新生成rsa，提升authorized_keys权限，重新创建服务器git账户，重新。。。。。</p>
-<p>翻遍了 Stack Overflow 和 segmentfault ,两个小时过去了，问题仍然没有进展，这么简单的东西，问题到底出在哪里。</p>
-<p>就在心灰意冷，准备放弃的时候，不知道是哪里来的灵感，准备把 authorized_keys 文件的其他用户的权限删掉，然后就能用了，后就能用了，就能用了，能用了，用了，了～～～～，命令如下，不想多说话，我想静静。</p>
-<p>$ chmod 600 authorized_keys</p>
+        <p>隔离级别<br>数据库事务有不同的隔离级别，不同的隔离级别对锁的使用是不同的，锁的应用最终导致不同事务的隔离级别。<br>实现隔离级别的方式就是加锁</p>
+<p>隔离级别的分类<br>读未提交 Read Uncommitted（在本次事务中可以读到其他事务中没有提交的数据-脏数据）<br>读已提交 Read Committed （只能读到其他事务提交过的数据。如果在当前事务中，其他事务有提交，则两次读取结果不同）<br>可重复读 Repeatable Read （默认，保证了事务中每次读取结果都相同，而不管其他事物是否已经提交。会出现幻读）<br>序列化 Serializable （隔离级别中最严格的，开启一个serializable事务，那么其他事务对数据表的写操作都会被挂起）<br>实验准备<br>首先创建一个表account</p>
+<p>CREATE TABLE account(<br>id INT NOT NULL AUTO_INCREMENT,<br>ACCOUNT FLOAT NOT NULL,<br>PRIMARY KEY(id)<br>)ENGINE=InnoDB DEFAULT CHARSET=utf8;<br>然后插入数据</p>
+<p>为了说明问题，我们打开两个控制台分别进行登录来模拟两个用户（暂且成为用户A和用户B吧），并设置当前MySQL会话的事务隔离级别。</p>
+<p>设置事务隔离级别<br>设置innodb的事务级别方法是：set 作用域 transaction isolation level 事务隔离级别<br>SET [SESSION | GLOBAL] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE}<br>mysql&gt; set global transaction isolation level read committed; //全局的<br>mysql&gt; set session transaction isolation level read committed; //当前会话<br>实验过程<br>1.read uncommitted（读取未提交数据）<br>A用户</p>
+<p>set session transaction isolation level read uncommitted;<br>start transaction;<br>select * from account;</p>
+<p>B用户</p>
+<p>set session transaction isolation level read uncommitted;<br>start transaction;<br>update account set account=account+200 where id = 1;<br>A用户查询</p>
+<p>结论一：我们将事务的隔离级别设置为读未提交，所以A用户能够读到B用户没有提交的数据<br>存在的问题：那么这么做有什么问题吗？<br>那就是我们在一个事务中可以随随便便读取到其他事务未提交的数据，这还是比较麻烦的，我们叫脏读。实际上我们的数据改变了吗？答案是否定的，因为只有事务commit后才会更新到数据库。</p>
+<p>2.read committed（可以读取其他事务提交的数据）—大多数数据库默认的隔离级别<br>将B用户的隔离级别设置为read committed</p>
+<p>set session transaction isolation level read committed<br>A用户</p>
+<p>start transaction;<br>update account set account = account-200 where id = 1;<br>select * from account;</p>
+<p>上图可知A中能查询到数据的变化</p>
+<p>B中</p>
+<p>没有查询到数据的变化<br>在A中commit之后再在B中查询</p>
+<p>结论二：我们将当前会话的隔离级别设置为read committed的时候，当前会话只能读取到其他事务提交的数据，未提交的数据读不到。<br>存在的问题：那就是我们在会话B同一个事务中，读取到两次不同的结果。这就造成了不可重复读，就是两次读取的结果不同。这种现象叫不可重复读。</p>
+<p>3.repeatable read（可重读）—MySQL默认的隔离级别<br>设置B中的隔离级别为repeatable read</p>
+<p>set session transaction isolation level repeatable read;<br>start transaction;<br>select * from account;</p>
+<p>在A中添加一条数据</p>
+<p>insert into account(id,account) value(3,1000);<br>commit;</p>
+<p>在B中再查询：</p>
+<p>用户B在他所在的会话中想插入一条新数据id=3，value=1000。来我们操作下：</p>
+<p>insert into account(id,account) value(3,5000);</p>
+<p>发现插入不进去</p>
+<p>结论三：当我们将当前会话的隔离级别设置为repeatable read的时候，当前会话可以重复读，就是每次读取的结果集都相同，而不管其他事务有没有提交。<br>出现的问题：<br>一个事务中读取的数据一致（可重复读），数据已经发生改变，但是我还是要保持一致。但是，出现了用户B面对的问题，这种现象叫幻读。</p>
+<p>4.serializable（串行化）<br>在B中先开启serializable事务</p>
+<p>set session transaction isolation level serializable;<br>start transaction;<br>select * from account;<br>然后在A中写数据，会出现超时，如果这时B commmit,那么A中会执行成功</p>
+<p>结论四：当我们将当前会话的隔离级别设置为serializable的时候，其他会话对该表的写操作将被挂起。可以看到，这是隔离级别中最严格的，但是这样做势必对性能造成影响。所以在实际的选用上，我们要根据当前具体的情况选用合适的。</p>
 
       
     </div>
@@ -392,8 +403,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/12/页面点击图片在新的窗口打开/" rel="next" title="页面点击图片在新的窗口打开">
-                <i class="fa fa-chevron-left"></i> 页面点击图片在新的窗口打开
+              <a href="/2018/09/28/无限极分类/" rel="next" title="无限极分类">
+                <i class="fa fa-chevron-left"></i> 无限极分类
               </a>
             
           </div>
@@ -401,10 +412,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/28/安装composer/" rel="prev" title="安装composer">
-                安装composer <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
